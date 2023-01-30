@@ -1,7 +1,6 @@
 package hexlet.code.games;
 
 import hexlet.code.Dice;
-
 import java.util.Scanner;
 
 public class Calc {
@@ -27,7 +26,6 @@ public class Calc {
             int[] intExpression = {sum, subtract, multiply};
             int intResult = intExpression[number];
             System.out.println("Question: " + strResult);
-            System.out.print("");
             var userAnswer = scanner.nextInt();
             if (userAnswer == intResult) {
                 System.out.println("Your answer: " + userAnswer);

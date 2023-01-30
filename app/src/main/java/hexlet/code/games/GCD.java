@@ -16,7 +16,6 @@ public class GCD {
             int diceNumber1 = Dice.getRandomDiceNumber();
             int diceNumber2 = Dice.getRandomDiceNumber();
             System.out.println("Question: " + diceNumber1 + " " + diceNumber2);
-            System.out.print("");
             var userAnswer = scanner.nextInt(); //nextInt()
             var bigger = 0;
             var smaller = 0;
@@ -38,7 +37,6 @@ public class GCD {
                     break;
                 }
             }
-
             var one = bigger;
             var two = smaller;
             while (one % two != 0) {
