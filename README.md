@@ -4,8 +4,8 @@
 
 ### CodeClimate checks:
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/6c17a32b8e219dd473e8/maintainability)](https://codeclimate.com/github/CyberXAndrew/java-project-61/maintainabi>
->>>>>>> Stashed changes
+[![Maintainability](https://api.codeclimate.com/v1/badges/6c17a32b8e219dd473e8/maintainability)](https://codeclimate.com/github/CyberXAndrew/java-project-61/maintainability)
+>>>>>>>> Stashed changes
 
 #### Links to asciinema recorded gameplay for each game:
 
