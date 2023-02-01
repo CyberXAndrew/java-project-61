@@ -2,6 +2,11 @@
 [![Actions Status](https://github.com/CyberXAndrew/java-project-61/workflows/hexlet-check/badge.svg)](https://github.com/CyberXAndrew/java-project-61/actions)
 <<<<<<< Updated upstream
 
+### CodeClimate checks:
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/6c17a32b8e219dd473e8/maintainability)](https://codeclimate.com/github/CyberXAndrew/java-project-61/maintainabi>
+>>>>>>> Stashed changes
+
 #### Links to asciinema recorded gameplay for each game:
 
 <details>
@@ -26,6 +31,3 @@
   
 [gameplay Prime - lose](https://asciinema.org/a/vk0MTlh0Ng6rBSQbriWVRaISH)
 </details>
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/6c17a32b8e219dd473e8/maintainability)](https://codeclimate.com/github/CyberXAndrew/java-project-61/maintainability)
->>>>>>> Stashed changes

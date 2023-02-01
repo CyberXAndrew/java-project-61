@@ -42,11 +42,12 @@ public class Prime {
                 System.out.println("Correct!");
             } else {
                 if (userAnswer.equals("no") && answer == true) {
-                    System.out.println(userAnswer + " is wrong answer ;(. Correct answer was '" + yesOrNo(answer) + "'.");
+                    System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was 'yes'.");
                     System.out.println("Let's try again, " + userName + "!");
                     break;
                 } else {
-                    System.out.println(userAnswer + " is wrong answer ;(. Correct answer was '" + yesOrNo(answer) + "'.");
+                    System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '"
+                            + yesOrNo(answer) + "'.");
                     System.out.println("Let's try again, " + userName + "!");
                     break;
                 }

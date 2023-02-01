@@ -39,8 +39,8 @@ public class Progression {
             if (userAnswer == progression[hideNumber]) {
                 System.out.println("Correct!");
             } else if (userAnswer != progression[hideNumber]) {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" +
-                        progression[hideNumber] + "'.");
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '"
+                        + progression[hideNumber] + "'.");
                 System.out.println("Let's try again, " + userName + "!");
                 break;
             }

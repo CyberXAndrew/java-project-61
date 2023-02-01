@@ -30,7 +30,8 @@ public class GCD {
                 if (userAnswer == diceNumber1) {
                     System.out.println("Correct!");
                 } else {
-                    System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + diceNumber1 + "'.");
+                    System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '"
+                            + diceNumber1 + "'.");
                     System.out.println("Let's try again, " + userName + "!");
                     break;
                 }
