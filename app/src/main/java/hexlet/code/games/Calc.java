@@ -27,11 +27,10 @@ public class Calc {
             int intResult = intExpression[number];
             System.out.println("Question: " + strResult);
             var userAnswer = scanner.nextInt();
+            System.out.println("Your answer: " + userAnswer);
             if (userAnswer == intResult) {
-                System.out.println("Your answer: " + userAnswer);
                 System.out.println("Correct!");
             } else if (userAnswer != intResult) {
-                System.out.println("Your answer: " + userAnswer);
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + intResult + "'.");
                 System.out.println("Let's try again, " + userName + "!");
                 break;

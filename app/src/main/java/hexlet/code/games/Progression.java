@@ -35,11 +35,10 @@ public class Progression {
             }
             System.out.println("");
             var userAnswer = scanner.nextInt();
+            System.out.println("Your answer: " + userAnswer);
             if (userAnswer == progression[hideNumber]) {
-                System.out.println("Your answer: " + userAnswer);
                 System.out.println("Correct!");
             } else if (userAnswer != progression[hideNumber]) {
-                System.out.println("Your answer: " + userAnswer);
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" +
                         progression[hideNumber] + "'.");
                 System.out.println("Let's try again, " + userName + "!");

@@ -15,7 +15,6 @@ public class Engine {
         for (i = 0; i < 3; i++) {
 
             System.out.println("Question: " + );
-            System.out.print("");
             var userAnswer = scanner.next(); //nextInt()
             if () {
                 System.out.println("Your answer: " + userAnswer);

@@ -4,7 +4,7 @@ import hexlet.code.Dice;
 
 import java.util.Scanner;
 public class GCD {
-    public static void divisor() { // метод выдает числа НОД которых чаще всего 1 :(
+    public static void divisor() { // метод выдает числа, НОД которых чаще всего 1 :(
         Scanner scanner = new Scanner(System.in);
         System.out.print("May I have your name? ");
         String userName = scanner.next();
@@ -25,18 +25,17 @@ public class GCD {
             } else if (diceNumber2 > diceNumber1) {
                 bigger = diceNumber2;
                 smaller = diceNumber1;
-            }
-            if (diceNumber1 == diceNumber2) {
+            } else if (diceNumber1 == diceNumber2) {
+                System.out.println("Your answer: " + userAnswer);
                 if (userAnswer == diceNumber1) {
-                    System.out.println("Your answer: " + userAnswer);
                     System.out.println("Correct!");
                 } else {
-                    System.out.println("Your answer: " + userAnswer);
                     System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + diceNumber1 + "'.");
                     System.out.println("Let's try again, " + userName + "!");
                     break;
                 }
             }
+
             var one = bigger;
             var two = smaller;
             while (one % two != 0) {
@@ -44,11 +43,11 @@ public class GCD {
                 one = two;
                 two = three;
             }
+
+            System.out.println("Your answer: " + userAnswer);
             if (userAnswer == two) {
-                System.out.println("Your answer: " + userAnswer);
                 System.out.println("Correct!");
             } else {
-                System.out.println("Your answer: " + userAnswer);
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + two + "'.");
                 System.out.println("Let's try again, " + userName + "!");
                 break;
