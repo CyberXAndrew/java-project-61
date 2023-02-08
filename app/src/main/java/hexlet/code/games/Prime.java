@@ -1,67 +1,33 @@
 package hexlet.code.games;
 
 import hexlet.code.Dice;
-import java.util.Scanner;
+import hexlet.code.Engine;
 
 public class Prime {
-    public static void isSimple() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("May I have your name? ");
-        String userName = scanner.next();
-        System.out.println("Hello, " + userName + "!");
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+    public static void gamePrime() {
+        String gameRules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        int countOfRounds = 3;
+        int questionPlusAnswer = 2;
+        String[][] data = new String[countOfRounds][questionPlusAnswer];
 
-        int i = 0;
-        boolean answer = false;
-        for (i = 0; i < 3; i++) {
+        for (int i = 0; i < countOfRounds; i++) {
             int number = Dice.getRandomDiceNumber();
-            if (number == 2 || number == 3) {
-                answer = true;
-            } else if (number % 2 == 0) {
-                answer = false;
-            } else {
-                for (int x = 3; x < 10; x++) {
-                    if (number == x && number % x == 0) {
-                        answer = true;
-                        break;
-                    } else if (number % x == 0) {
-                        answer = false;
-                        break;
-                    } else if (number > 9 && x == 9) {
-                        answer = true;
-                    } else {
-                        continue;
-                    }
-                }
-            }
+            data[i][0] = "" + number;
+            data[i][1] = isSimple(number) ? "yes" : "no";
+        }
 
-            System.out.println("Question: " + number);
-            var userAnswer = scanner.next(); //nextInt()
-            if (userAnswer.equals("yes") && answer == true || userAnswer.equals("no") && answer == false) {
-                System.out.println("Your answer: " + userAnswer);
-                System.out.println("Correct!");
-            } else {
-                if (userAnswer.equals("no") && answer == true) {
-                    System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was 'yes'.");
-                    System.out.println("Let's try again, " + userName + "!");
-                    break;
-                } else {
-                    System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '"
-                            + yesOrNo(answer) + "'.");
-                    System.out.println("Let's try again, " + userName + "!");
-                    break;
-                }
-            }
-        }
-        if (i == 3) {
-            System.out.println("Congratulations, " + userName + "!");
-        }
+        Engine.start(gameRules, data);
     }
 
-    public static String yesOrNo(boolean answer) {
-        if (answer == true) {
-            return "yes";
+    public static boolean isSimple(int number) {
+        if (number <= 1) {
+            return false;
         }
-        return "no";
+        for (int i = 2; i <= number / 2; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
