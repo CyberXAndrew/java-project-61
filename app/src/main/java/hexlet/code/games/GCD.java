@@ -6,9 +6,8 @@ import hexlet.code.Engine;
 public class GCD {
     public static void runGame() { // метод выдает числа, НОД которых чаще всего 1 :(
         String gameRules = "Find the greatest common divisor of given numbers.";
-        int countOfRounds = 3;
-        int questionPlusAnswer = 2;
-        String[][] data = new String[countOfRounds][questionPlusAnswer];
+        int countOfRounds = Engine.getCountOfRounds();
+        String[][] data = new String[Engine.getCountOfRounds()][Engine.getArrayDepth()];
 
         for (int i = 0; i < 3; i++) {
             int diceNumber1 = Dice.getRandomDiceNumber();

@@ -4,6 +4,10 @@ import hexlet.code.Dice;
 import hexlet.code.Engine;
 
 public class Progression {
+    private static final int MINIMAL_PROGRESSION_LENGTH = 5;
+    private static final int MAXIMAL_PROGRESSION_LENGTH = 10;
+    private static final int MINIMAL_INCREASE_STEP = 1;
+    private static final int MAXIMAL_INCREASE_STEP = 5;
     public static void runGame() {
         String gameRules = "What number is missing in the progression?";
 
@@ -11,13 +15,12 @@ public class Progression {
     }
 
     public static String[][] getQuestionAndAnswerArray() {
-        int countOfRounds = 3;
-        int questionPlusAnswer = 2;
-        String[][] data = new String[countOfRounds][questionPlusAnswer];
+        int countOfRounds = Engine.getCountOfRounds();
+        String[][] data = new String[Engine.getCountOfRounds()][Engine.getArrayDepth()];
 
         for (int i = 0; i < countOfRounds; i++) {
-            int progressionSize = Dice.getRandomDiceNumber(5, 10);
-            int increaser = Dice.getRandomDiceNumber(1, 5);
+            int progressionSize = Dice.getRandomDiceNumber(MINIMAL_PROGRESSION_LENGTH, MAXIMAL_PROGRESSION_LENGTH);
+            int increaser = Dice.getRandomDiceNumber(MINIMAL_INCREASE_STEP, MAXIMAL_INCREASE_STEP);
             int startNumber = Dice.getRandomDiceNumber();
             String[] progression = makeProgression(startNumber, increaser, progressionSize);
             int hideNumber = (int) (Math.random() * progressionSize);

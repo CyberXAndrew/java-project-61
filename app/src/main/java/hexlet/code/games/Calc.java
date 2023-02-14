@@ -6,9 +6,8 @@ import hexlet.code.Engine;
 public class Calc {
     public static void runGame() {
         String gameRules = "What is the result of the expression?";
-        int countOfRounds = 3;
-        int questionPlusAnswer = 2;
-        String[][] data = new String[countOfRounds][questionPlusAnswer];
+        int countOfRounds = Engine.getCountOfRounds();
+        String[][] data = new String[Engine.getCountOfRounds()][Engine.getArrayDepth()];
 
         for (int i = 0; i < countOfRounds; i++) {
             String operator = getRandomOperator();

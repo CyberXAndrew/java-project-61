@@ -6,9 +6,8 @@ import hexlet.code.Engine;
 public class Prime {
     public static void runGame() {
         String gameRules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        int countOfRounds = 3;
-        int questionPlusAnswer = 2;
-        String[][] data = new String[countOfRounds][questionPlusAnswer];
+        int countOfRounds = Engine.getCountOfRounds();
+        String[][] data = new String[Engine.getCountOfRounds()][Engine.getArrayDepth()];
 
         for (int i = 0; i < countOfRounds; i++) {
             int number = Dice.getRandomDiceNumber();
