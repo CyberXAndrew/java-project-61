@@ -1,9 +1,9 @@
 package hexlet.code;
 
 public class Dice {
+    private static final int PRE_MAXIMAL_NUMBER = 99;
     public static int getRandomDiceNumber() {
-        int preMaximalNumber = 99;
-        int integer = (int) (Math.random() * preMaximalNumber + 1);
+        int integer = (int) (Math.random() * PRE_MAXIMAL_NUMBER + 1);
         return integer;
     }
 

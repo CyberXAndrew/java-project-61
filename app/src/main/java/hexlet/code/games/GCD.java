@@ -9,7 +9,7 @@ public class GCD {
         int countOfRounds = Engine.getCountOfRounds();
         String[][] data = new String[Engine.getCountOfRounds()][Engine.getArrayDepth()];
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < countOfRounds; i++) {
             int diceNumber1 = Dice.getRandomDiceNumber();
             int diceNumber2 = Dice.getRandomDiceNumber();
             String question = diceNumber1 + " " + diceNumber2;
