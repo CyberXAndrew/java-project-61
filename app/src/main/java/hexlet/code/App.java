@@ -19,19 +19,19 @@ public class App {
                 Cli.ask();
                 break;
             case "2":
-                Even.isParity();
+                Even.runGame();
                 break;
             case "3":
-                Calc.calculator();
+                Calc.runGame();
                 break;
             case "4":
-                GCD.divisor();
+                GCD.runGame();
                 break;
             case "5":
-                Progression.progressor();
+                Progression.runGame();
                 break;
             case "6":
-                Prime.gamePrime();
+                Prime.runGame();
                 break;
             default:
                 System.exit(0);

@@ -13,24 +13,20 @@ public class Engine {
 
         System.out.println(gameRules);
 
-        int winsCounter = 0;
         for (var act: data) {
             System.out.println("Question: " + act[0]);
             var userAnswer = scanner.next();
             System.out.println("Your answer: " + userAnswer);
             if (userAnswer.equals(act[1])) {
                 System.out.println("Correct!");
-                winsCounter += 1;
             } else {
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '"
                         + act[1] + "'.");
                 System.out.println("Let's try again, " + userName + "!");
-                break;
+                return;
             }
         }
-        if (winsCounter == 3) {
-            System.out.println("Congratulations, " + userName + "!");
-        }
+        System.out.println("Congratulations, " + userName + "!");
     }
 }
 

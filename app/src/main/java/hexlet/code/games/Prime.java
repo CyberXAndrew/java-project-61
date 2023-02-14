@@ -4,7 +4,7 @@ import hexlet.code.Dice;
 import hexlet.code.Engine;
 
 public class Prime {
-    public static void gamePrime() {
+    public static void runGame() {
         String gameRules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         int countOfRounds = 3;
         int questionPlusAnswer = 2;
@@ -13,13 +13,13 @@ public class Prime {
         for (int i = 0; i < countOfRounds; i++) {
             int number = Dice.getRandomDiceNumber();
             data[i][0] = "" + number;
-            data[i][1] = isSimple(number) ? "yes" : "no";
+            data[i][1] = getPrime(number) ? "yes" : "no";
         }
 
         Engine.start(gameRules, data);
     }
 
-    public static boolean isSimple(int number) {
+    public static boolean getPrime(int number) {
         if (number <= 1) {
             return false;
         }

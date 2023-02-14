@@ -4,7 +4,7 @@ import hexlet.code.Dice;
 import hexlet.code.Engine;
 
 public class Even {
-    public static void isParity() {
+    public static void runGame() {
         String gameRules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
         int countOfRounds = 3;

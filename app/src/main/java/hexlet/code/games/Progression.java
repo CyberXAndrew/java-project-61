@@ -4,28 +4,23 @@ import hexlet.code.Dice;
 import hexlet.code.Engine;
 
 public class Progression {
-    public static void progressor() {
+    public static void runGame() {
         String gameRules = "What number is missing in the progression?";
 
-        Engine.start(gameRules, makeProgression());
+        Engine.start(gameRules, getQuestionAndAnswerArray());
     }
 
-    public static String[][] makeProgression() {
+    public static String[][] getQuestionAndAnswerArray() {
         int countOfRounds = 3;
         int questionPlusAnswer = 2;
         String[][] data = new String[countOfRounds][questionPlusAnswer];
 
         for (int i = 0; i < countOfRounds; i++) {
-            int progressionSize = Dice.getRandomDiceNumber(5, 10); // 5-10 вкл
-            int increaser = Dice.getRandomDiceNumber(1, 5); // увеличитель 1-5 вкл
-            int startNumber = Dice.getRandomDiceNumber(); //начальное число
-            int hideNumber = (int) (Math.random() * progressionSize); //число от 0 ДО progressionSize
-            String[] progression = new String[progressionSize];
-            int temp = startNumber;
-            for (int x = 0; x < progressionSize; x++) {
-                progression[x] = Integer.toString(temp);
-                temp += increaser;
-            }
+            int progressionSize = Dice.getRandomDiceNumber(5, 10);
+            int increaser = Dice.getRandomDiceNumber(1, 5);
+            int startNumber = Dice.getRandomDiceNumber();
+            String[] progression = makeProgression(startNumber, increaser, progressionSize);
+            int hideNumber = (int) (Math.random() * progressionSize);
             String hidden = progression[hideNumber];
             progression[hideNumber] = "..";
             String consequenceString = "";
@@ -33,28 +28,19 @@ public class Progression {
                 consequenceString += act;
                 consequenceString += " ";
             }
-
-            data[i][0] = consequenceString;
+            data[i][0] = consequenceString.trim();
             data[i][1] = hidden;
-
         }
-
         return data;
     }
-}
 
-//            System.out.println("");
-//            var userAnswer = scanner.nextInt();
-//            System.out.println("Your answer: " + userAnswer);
-//            if (userAnswer == progression[hideNumber]) {
-//                System.out.println("Correct!");
-//            } else if (userAnswer != progression[hideNumber]) {
-//                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '"
-//                        + progression[hideNumber] + "'.");
-//                System.out.println("Let's try again, " + userName + "!");
-//                break;
-//            }
-//        }
-//        if (i == 3) {
-//            System.out.println("Congratulations, " + userName + "!");
-//
+    public static String[] makeProgression(int startNumber, int increaser, int progressionSize) {
+        String[] progression = new String[progressionSize];
+        int temp = startNumber;
+        for (int x = 0; x < progressionSize; x++) {
+            progression[x] = Integer.toString(temp);
+            temp += increaser;
+        }
+        return progression;
+    }
+}
