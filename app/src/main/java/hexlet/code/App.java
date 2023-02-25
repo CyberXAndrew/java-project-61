@@ -34,7 +34,7 @@ public class App {
                 Prime.runGame();
                 break;
             default:
-                "Unknown command. Bye!"
+                System.out.println("Unknown command. Bye!");
                 break;
         }
     }
