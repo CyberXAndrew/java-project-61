@@ -12,11 +12,15 @@ public class Even {
         for (int i = 0; i < countOfRounds; i++) {
             int diceNumber = Dice.getRandomDiceNumber();
             String question = Integer.toString(diceNumber);
-            String answer = diceNumber % 2 == 0 ? "yes" : "no";
+            String answer = isEven(diceNumber);
             data[i][0] = question;
             data[i][1] = answer;
         }
 
         Engine.start(gameRules, data);
+    }
+
+    public static String isEven(int number) {
+        number % 2 == 0 ? return "yes" : return "no";
     }
 }

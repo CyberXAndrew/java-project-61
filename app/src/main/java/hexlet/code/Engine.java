@@ -6,9 +6,11 @@ import java.util.Scanner;
 public class Engine {
     private static final int COUNT_OF_ROUNDS = 3;
     private static final int ANSWER_PLUS_QUESTION = 2;
+
     public static int getCountOfRounds() {
         return COUNT_OF_ROUNDS;
     }
+
     public static int getArrayDepth() {
         return ANSWER_PLUS_QUESTION;
     }

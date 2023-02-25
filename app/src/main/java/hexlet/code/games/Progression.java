@@ -8,6 +8,7 @@ public class Progression {
     private static final int MAXIMAL_PROGRESSION_LENGTH = 10;
     private static final int MINIMAL_INCREASE_STEP = 1;
     private static final int MAXIMAL_INCREASE_STEP = 5;
+
     public static void runGame() {
         String gameRules = "What number is missing in the progression?";
 

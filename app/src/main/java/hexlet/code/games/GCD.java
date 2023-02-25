@@ -4,7 +4,7 @@ import hexlet.code.Dice;
 import hexlet.code.Engine;
 
 public class GCD {
-    public static void runGame() { // метод выдает числа, НОД которых чаще всего 1 :(
+    public static void runGame() {
         String gameRules = "Find the greatest common divisor of given numbers.";
         int countOfRounds = Engine.getCountOfRounds();
         String[][] data = new String[Engine.getCountOfRounds()][Engine.getArrayDepth()];
