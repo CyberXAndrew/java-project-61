@@ -5,6 +5,7 @@ import hexlet.code.games.Calc;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Prime;
 import hexlet.code.games.Progression;
+
 import java.util.Scanner;
 
 public class App {
@@ -15,27 +16,14 @@ public class App {
         String userChoise = scanner.next();
         System.out.println("Your choise: " + userChoise);
         switch (userChoise) {
-            case "1":
-                Cli.ask();
-                break;
-            case "2":
-                Even.runGame();
-                break;
-            case "3":
-                Calc.runGame();
-                break;
-            case "4":
-                GCD.runGame();
-                break;
-            case "5":
-                Progression.runGame();
-                break;
-            case "6":
-                Prime.runGame();
-                break;
-            default:
-                System.out.println("Unknown command. Bye!");
-                break;
+            case "0" -> scanner.close();
+            case "1" -> Cli.ask();
+            case "2" -> Even.runGame();
+            case "3" -> Calc.runGame();
+            case "4" -> GCD.runGame();
+            case "5" -> Progression.runGame();
+            case "6" -> Prime.runGame();
+            default -> System.out.println("Unknown command. Bye!");
         }
     }
 }

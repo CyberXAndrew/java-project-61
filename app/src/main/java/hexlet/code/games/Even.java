@@ -12,7 +12,7 @@ public class Even {
         for (int i = 0; i < countOfRounds; i++) {
             int diceNumber = Dice.getRandomDiceNumber();
             String question = Integer.toString(diceNumber);
-            String answer = isEven(diceNumber);
+            String answer = isEven(diceNumber) ? "yes" : "no";
             data[i][0] = question;
             data[i][1] = answer;
         }
@@ -20,8 +20,10 @@ public class Even {
         Engine.start(gameRules, data);
     }
 
-    public static String isEven(int number) {
-        String answer = number % 2 == 0 ? "yes" : "no";
-        return answer;
+    public static boolean isEven(int number) {
+        if (number % 2 == 0) {
+            return true;
+        }
+        return false;
     }
 }

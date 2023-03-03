@@ -24,7 +24,7 @@ public class Engine {
 
         System.out.println(gameRules);
 
-        for (var act: data) {
+        for (var act : data) {
             System.out.println("Question: " + act[0]);
             var userAnswer = scanner.next();
             System.out.println("Your answer: " + userAnswer);
