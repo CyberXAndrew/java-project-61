@@ -10,5 +10,6 @@ class SomeClassTest {
         var expected = 5;
         var actual = SomeClass.sum(3, 2);
         assertEquals(expected, actual);
+        var y = 1;
     }
 }
