@@ -23,12 +23,16 @@ public class Progression {
             int progressionSize = Dice.getRandomDiceNumber(MINIMAL_PROGRESSION_LENGTH, MAXIMAL_PROGRESSION_LENGTH);
             int increaser = Dice.getRandomDiceNumber(MINIMAL_INCREASE_STEP, MAXIMAL_INCREASE_STEP);
             int startNumber = Dice.getRandomDiceNumber();
-            String[] progression = makeProgression(startNumber, increaser, progressionSize);
+            int[] progression = makeProgression(startNumber, increaser, progressionSize);
+            String[] strProgression = new String[progression.length];
+            for (int y = 0; y < strProgression.length; y++) {
+                strProgression[y] = Integer.toString(progression[y]);
+            }
             int hideNumber = (int) (Math.random() * progressionSize);
-            String hidden = progression[hideNumber];
-            progression[hideNumber] = "..";
+            String hidden = strProgression[hideNumber];
+            strProgression[hideNumber] = "..";
             String consequenceString = "";
-            for (var act : progression) {
+            for (var act : strProgression) {
                 consequenceString += act;
                 consequenceString += " ";
             }
@@ -38,12 +42,10 @@ public class Progression {
         return data;
     }
 
-    public static String[] makeProgression(int startNumber, int increaser, int progressionSize) {
-        String[] progression = new String[progressionSize];
-        int temp = startNumber;
+    public static int[] makeProgression(int startNumber, int increaser, int progressionSize) {
+        int[] progression = new int[progressionSize]; //-- теперь массив инт, а при использовании будет стринг
         for (int x = 0; x < progressionSize; x++) {
-            progression[x] = Integer.toString(temp);
-            temp += increaser;
+                progression[x] = startNumber + ((x + 1) - 1) * increaser;
         }
         return progression;
     }
