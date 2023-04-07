@@ -45,7 +45,7 @@ public class Progression {
     public static int[] makeProgression(int startNumber, int increaser, int progressionSize) {
         int[] progression = new int[progressionSize]; //-- теперь массив инт, а при использовании будет стринг
         for (int x = 0; x < progressionSize; x++) {
-                progression[x] = startNumber + ((x + 1) - 1) * increaser;
+                progression[x] = startNumber + (x * increaser);
         }
         return progression;
     }

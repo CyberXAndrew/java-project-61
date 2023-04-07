@@ -4,9 +4,7 @@ import hexlet.code.Dice;
 import hexlet.code.Engine;
 
 public class Calc {
-    private static final String MINUS = "-";
-    private static final String PLUS = "+";
-    private static final String MULTIPLY = "*";
+    private static final String[] OPERATORS = {"-", "+", "*"};
     public static void runGame() {
         String gameRules = "What is the result of the expression?";
         int countOfRounds = Engine.getCountOfRounds();
@@ -24,8 +22,7 @@ public class Calc {
     }
 
     public static String getRandomOperator() {
-        String[] operators = {MINUS, MULTIPLY, PLUS};
-        return operators[Dice.getRandomDiceNumber(0, 2)];
+        return OPERATORS[Dice.getRandomDiceNumber(0, 2)];
     }
 
     public static String getStringFormOfAnswer(String operator, int number1, int number2) {
