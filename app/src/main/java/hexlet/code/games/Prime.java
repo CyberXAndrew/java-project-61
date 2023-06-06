@@ -10,7 +10,7 @@ public class Prime {
         String[][] data = new String[Engine.getCountOfRounds()][Engine.getArrayDepth()];
 
         for (int i = 0; i < countOfRounds; i++) {
-            int number = Dice.getRandomDiceNumber();
+            int number = Dice.getRandomNumber();
             data[i][0] = "" + number;
             data[i][1] = isPrime(number) ? "yes" : "no";
         }

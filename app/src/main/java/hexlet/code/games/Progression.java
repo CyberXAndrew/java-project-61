@@ -20,9 +20,9 @@ public class Progression {
         String[][] data = new String[Engine.getCountOfRounds()][Engine.getArrayDepth()];
 
         for (int i = 0; i < countOfRounds; i++) {
-            int progressionSize = Dice.getRandomDiceNumber(MINIMAL_PROGRESSION_LENGTH, MAXIMAL_PROGRESSION_LENGTH);
-            int increaser = Dice.getRandomDiceNumber(MINIMAL_INCREASE_STEP, MAXIMAL_INCREASE_STEP);
-            int startNumber = Dice.getRandomDiceNumber();
+            int progressionSize = Dice.getRandomNumber(MINIMAL_PROGRESSION_LENGTH, MAXIMAL_PROGRESSION_LENGTH);
+            int increaser = Dice.getRandomNumber(MINIMAL_INCREASE_STEP, MAXIMAL_INCREASE_STEP);
+            int startNumber = Dice.getRandomNumber();
             int[] progression = makeProgression(startNumber, increaser, progressionSize);
             String[] strProgression = new String[progression.length];
             for (int y = 0; y < strProgression.length; y++) {

@@ -10,7 +10,7 @@ public class Even {
         String[][] data = new String[Engine.getCountOfRounds()][Engine.getArrayDepth()];
 
         for (int i = 0; i < countOfRounds; i++) {
-            int diceNumber = Dice.getRandomDiceNumber();
+            int diceNumber = Dice.getRandomNumber();
             String question = Integer.toString(diceNumber);
             String answer = isEven(diceNumber) ? "yes" : "no";
             data[i][0] = question;
@@ -21,9 +21,6 @@ public class Even {
     }
 
     public static boolean isEven(int number) {
-        if (number % 2 == 0) {
-            return true;
-        }
-        return false;
+        return number % 2 == 0;
     }
 }

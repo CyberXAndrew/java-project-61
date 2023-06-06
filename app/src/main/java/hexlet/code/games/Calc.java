@@ -12,8 +12,8 @@ public class Calc {
 
         for (int i = 0; i < countOfRounds; i++) {
             String operator = getRandomOperator();
-            int number1 = Dice.getRandomDiceNumber();
-            int number2 = Dice.getRandomDiceNumber();
+            int number1 = Dice.getRandomNumber();
+            int number2 = Dice.getRandomNumber();
             data[i][0] = number1 + " " + operator + " " + number2;
             data[i][1] = getStringFormOfAnswer(operator, number1, number2);
         }
@@ -22,24 +22,16 @@ public class Calc {
     }
 
     public static String getRandomOperator() {
-        return OPERATORS[Dice.getRandomDiceNumber(0, 2)];
+        return OPERATORS[Dice.getRandomNumber(0, OPERATORS.length)];
     }
 
     public static String getStringFormOfAnswer(String operator, int number1, int number2) {
         int result = 0;
         switch (operator) {
-            case "+":
-                result = number1 + number2;
-                break;
-            case "-":
-                result = number1 - number2;
-                break;
-            case "*":
-                result = number1 * number2;
-                break;
-            default:
-                System.out.println("Для оператора " + operator + "не определена логика");
-                break;
+            case "+" -> result = number1 + number2;
+            case "-" -> result = number1 - number2;
+            case "*" -> result = number1 * number2;
+            default -> System.out.println("Для оператора " + operator + "не определена логика");
         }
         return Integer.toString(result);
     }

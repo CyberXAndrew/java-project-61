@@ -10,8 +10,8 @@ public class GCD {
         String[][] data = new String[Engine.getCountOfRounds()][Engine.getArrayDepth()];
 
         for (int i = 0; i < countOfRounds; i++) {
-            int diceNumber1 = Dice.getRandomDiceNumber();
-            int diceNumber2 = Dice.getRandomDiceNumber();
+            int diceNumber1 = Dice.getRandomNumber();
+            int diceNumber2 = Dice.getRandomNumber();
             String question = diceNumber1 + " " + diceNumber2;
             String answer = Integer.toString(findGCD(diceNumber1, diceNumber2));
             data[i][0] = question;
