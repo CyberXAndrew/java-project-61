@@ -4,12 +4,10 @@ public class Dice {
     private static final int PRE_MAXIMAL_NUMBER = 99;
 
     public static int getRandomNumber() {
-        int integer = (int) (Math.random() * PRE_MAXIMAL_NUMBER + 1);
-        return integer;
+        return (int) (Math.random() * PRE_MAXIMAL_NUMBER + 1);
     }
 
     public static int getRandomNumber(int min, int max) {
-        int integer = (int) (Math.random() * (max - min + 1) + min);
-        return integer;
+        return (int) (Math.random() * (max - min + 1) + min);
     }
 }

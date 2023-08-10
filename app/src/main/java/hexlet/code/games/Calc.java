@@ -22,7 +22,7 @@ public class Calc {
     }
 
     public static String getRandomOperator() {
-        return OPERATORS[Dice.getRandomNumber(0, OPERATORS.length)];
+        return OPERATORS[Dice.getRandomNumber(0, (OPERATORS.length - 1))];
     }
 
     public static String getStringFormOfAnswer(String operator, int number1, int number2) {
