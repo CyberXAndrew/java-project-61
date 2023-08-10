@@ -14,7 +14,7 @@
 different games (list below) that asks you three questions, while all questions get correct answers from player, game will be 
 completed. If one of three answers will be incorrect the game will say goodbye to player and could be started again. 
 
-**To start** Brain Games menu type "**make run-dist**" in your terminal and follow the instructions.\
+**To start** Brain Games menu type "**make run-dist**" in your terminal and follow the instructions.
 
 List of games:
 - Even - determine the parity of given random numbers.
@@ -23,35 +23,9 @@ List of games:
 - Progression - find the hidden number in the arithmetic progression.
 - Prime - define is the number prime or not.
 
-Also, you can see gameplay of each game:
-
-#### Links to asciinema recorded gameplay for each game:
+***Also, you can see gameplay. Links to asciinema recorded gameplay for each game:***
 
 | Even | Calc | GCD | Progression | Prime |
 |:-:|:-:|:-:|:-:|:-:|
-|[win]()|[win]()|[win]()|[win]()|[win]()|
-|[lose]()|[lose]()|[lose]()|[lose]()|[lose]()|
-
-<details>
-
-[gameplay Even - win](https://asciinema.org/a/BA55t5rXM05Gg7P4oHIiLZtKG)
-
-[gameplay Even - lose](https://asciinema.org/a/DIBAfVbumZpDzQp2iDqR4x2dM)
-  
-[gameplay Calc - win](https://asciinema.org/a/oKJxBhuT1bTOwPBtmgMVzEbNE)
-  
-[gameplay Calc - lose](https://asciinema.org/a/VPPhnLn1qzwubyqfZ6fXAJer1)
-  
-[gameplay GCD - win](https://asciinema.org/a/VuFSzvEb3Jz7rFZsbTrXHug48)
-  
-[gameplay GCD - lose](https://asciinema.org/a/dnVpXftQKqxT2QeY7VgQf3LZq)
-  
-[gameplay Progression - win](https://asciinema.org/a/p71xQ1lsRQTH6oT5r8tQVoKar)
-  
-[gameplay Progression - lose](https://asciinema.org/a/UIFDoRl7loXDdMzrMpaMLFrPq)
-  
-[gameplay Prime - win](https://asciinema.org/a/vjsm5fSXN4gbDEaGKqcsEu3nF)
-  
-[gameplay Prime - lose](https://asciinema.org/a/vk0MTlh0Ng6rBSQbriWVRaISH)
-
-</details>
+|[win](https://asciinema.org/a/601754)|[win](https://asciinema.org/a/601760)|[win](https://asciinema.org/a/601765)|[win](https://asciinema.org/a/601766)|[win](https://asciinema.org/a/601771)|
+|[lose](https://asciinema.org/a/601755)|[lose](https://asciinema.org/a/601758)|[lose](https://asciinema.org/a/601763)|[lose](https://asciinema.org/a/601768)|[lose](https://asciinema.org/a/601769)|
