@@ -36,8 +36,8 @@ public class Calc {
             case "*" -> {
                 return Integer.toString(number1 * number2);
             }
-            default -> System.out.println("Для оператора " + operator + " не определена логика, возвращено " +
-                    "стандартное значение: +");
+            default -> System.out.println("Для оператора " + operator + " не определена логика, возвращено "
+                    + "стандартное значение: +");
         }
         return Integer.toString(number1 + number2);
     }
