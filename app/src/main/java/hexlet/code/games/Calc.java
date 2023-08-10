@@ -26,13 +26,19 @@ public class Calc {
     }
 
     public static String getStringFormOfAnswer(String operator, int number1, int number2) {
-        int result = 0;
         switch (operator) {
-            case "+" -> result = number1 + number2;
-            case "-" -> result = number1 - number2;
-            case "*" -> result = number1 * number2;
-            default -> System.out.println("Для оператора " + operator + "не определена логика");
+            case "+" -> {
+                return Integer.toString(number1 + number2);
+            }
+            case "-" -> {
+                return Integer.toString(number1 - number2);
+            }
+            case "*" -> {
+                return Integer.toString(number1 * number2);
+            }
+            default -> System.out.println("Для оператора " + operator + " не определена логика, возвращено " +
+                    "стандартное значение: +");
         }
-        return Integer.toString(result);
+        return Integer.toString(number1 + number2);
     }
 }
